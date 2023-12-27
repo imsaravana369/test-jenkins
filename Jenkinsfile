@@ -6,11 +6,15 @@ pipeline {
                 sh 'node --version'
             }
         }
-		stage('execute code'){
+		stage('clone repo'){
 			steps{
 				git branch: 'main',
 					url: 'https://github.com/imsaravana369/test-jenkins-2.git'
-				sh 'ls'
+			}
+		}
+		stage('execute code'){
+			steps{
+				sh 'echo hello'
 			}
 		}
     }
