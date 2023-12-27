@@ -13,6 +13,7 @@ pipeline {
 				    userRemoteConfigs: [[url: 'https://github.com/imsaravana369/test-jenkins-2.git']]])
 
 				}
+				sh 'npm run start'
 				// git branch: 'main',
 				// 	url: 'https://github.com/imsaravana369/test-jenkins-2.git'
 			}
