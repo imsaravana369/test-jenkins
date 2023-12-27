@@ -8,9 +8,11 @@ pipeline {
         }
 		stage('clone repo'){
 			steps{
+				dir('some_folder'){
 				checkout([$class: 'GitSCM', branches: [[name: 'main']],
 				    userRemoteConfigs: [[url: 'https://github.com/imsaravana369/test-jenkins-2.git']]])
 
+				}
 				// git branch: 'main',
 				// 	url: 'https://github.com/imsaravana369/test-jenkins-2.git'
 			}
