@@ -10,7 +10,7 @@ pipeline {
 			steps{
 				git branch: 'main',
 					url: 'https://github.com/imsaravana369/test-jenkins-2.git'
-				sh 'cd My-First-Pipeline_main && npm run start'
+				sh 'ls'
 			}
 		}
     }
